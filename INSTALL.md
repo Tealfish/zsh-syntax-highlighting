@@ -40,13 +40,19 @@ To install zsh-syntax-highlighting under oh-my-zsh:
 
         git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-2. Activate the plugin in `~/.zshrc`:
+2. Activate the plugin in `~/.zshrc` (put this at the buttom):
 
-        plugins=( [plugins...] zsh-syntax-highlighting)
+        plugins+=(zsh-syntax-highlighting)
+        
+3. Add a line that will list items when running "4."
+        
+        echo plugins: $plugins
 
-3. Source `~/.zshrc`  to take changes into account:
+4. Source `~/.zshrc`  to take changes into account:
 
         source ~/.zshrc
+        
+NOTE: make sure that "zsh-syntax-highlighting" is the last item in the returned text.
 
 Note that `zsh-syntax-highlighting` must be the last plugin sourced,
 so make it the last element of the `$plugins` array.
